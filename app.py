@@ -25,7 +25,7 @@ h1, h2, h3, p, label, div {
 """, unsafe_allow_html=True)
 
 # Rimage header 
-st.image(IMG_5462.png", use_container_width=True)
+st.image("IMG_5462.png", use_container_width=True)
 
 st.title("Ask Jeebs")
 
