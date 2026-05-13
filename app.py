@@ -71,7 +71,13 @@ if st.session_state.answered:
 
     with col2:
         if st.button("No"):
-            st.error("What even the frik!")
+            st.session_state.show_retry = True
+    if "show_retry" not in st.session_state:
+        st.session_state.show_retry = False
+    if st.session_state.show_retry:
+        st.error("What even the frik!")
+        if st.button("Ask Jeebs Something Else"):
             st.session_state.answered = False
             st.session_state.response = ""
+            st.session_state.show_retry = False
             st.rerun()
